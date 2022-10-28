@@ -4,67 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
+    <title>Rock paper scissors</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <script>
-        function getComputerChoice() {
-            cchoice = Math.floor(Math.random() * 3);
-            if (cchoice===0) {
-                return "rock"
-            } else if (cchoice===1) {
-                return "paper"
-            } else {
-                return "scissors"
-            }}
-        function playerSelection() {
-            return prompt("Rock paper or scissors?:").toLowerCase();
-        }   
-        function play(pchoice,cchoice){
-            let c=0
-            let p=0
-                if (pchoice=="rock"){
-                    if (cchoice=="rock"){
-                        return "Draw";
-                    }
-                    if (cchoice=="paper"){
-                        c++;
-                        return "Computer wins";
-                    }
-                    if (cchoice=="scissors"){
-                        p++;
-                        return "player wins";   
-                    }}
-                else if (pchoice=="paper"){
-                    if (cchoice=="rock"){
-                        p++;
-                        return "player wins";     
-                    }
-                    if (cchoice=="paper"){
-                        return "Draw";
-                    }
-                    if (cchoice=="scissors"){
-                        c++;
-                        return "Computer wins";
-                    }
-                }
-                else if (pchoice=="scissors") {
-                    if (cchoice=="rock"){
-                        c++;
-                        return "Computer wins";  
-                    }
-                    if (cchoice=="paper"){
-                        p++;
-                        return "player wins";
-                    }
-                    if (cchoice=="scissors"){
-                        return "Draw";   
-                    }
-                    }
-                }
-            
-            for (let i = 0; i < 5; i++) {
-        console.log(play(playerSelection(),getComputerChoice()));}
-    </script>
-</body>
-</html>
+    <body>
+        <div class="selections">
+            <button value="rock" >✊</button>
+            <button value="paper">✋</button>
+            <button value="scissors">✌️</button>
+        </div>
+        <div class="score"></div>
+            <div id="result"></div>
+        </div>
+        <script src="script.js" ></script>
+    </body>
+</html>       
+    
